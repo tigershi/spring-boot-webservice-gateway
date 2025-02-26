@@ -3,6 +3,8 @@ package org.springframework.cloud.ws.ui.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Author:Tiger Shi
+ * Date:2024/12/4
  * 此注解用于描述webservice 接口，可用在webservice 注册endpoint的时候使用，
  * 或者在定义实现webservice的类上使用（有webservice注解的实现类）
  */

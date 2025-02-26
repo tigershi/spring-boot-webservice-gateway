@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  * Author:Tiger Shi
+ *  * Date:2024/12/4
+ */
 public class WebServiceModuleDesc implements Serializable {
     private static final long serialVersionUID = -3380911230956444816L;
 

@@ -17,6 +17,7 @@ import org.springframework.web.util.pattern.PathPatternParser;
 import java.util.ArrayList;
 /**
  * Author:Tiger Shi
+ * * Date: 2024/12/2
  *It use to configure cross region and register DiscoveryClientRouteDefinitionLocator that use to
  * get the register server information from miro-service register center
  * 用于跨域配置和注册DiscoveryClientRouteDefinitionLocator，后者用于从微服务注册中心得到微服务的注册信息

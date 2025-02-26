@@ -2,6 +2,10 @@ package org.springframework.cloud.ws.ui.model;
 
 import java.util.List;
 
+/**
+ *  * Author:Tiger Shi
+ *  * Date:2024/12/4
+ */
 public class WebServiceInterfaceHtmlTemple {
 
     private static String htmlHead="<!DOCTYPE html>\n" +

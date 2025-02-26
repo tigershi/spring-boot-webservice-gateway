@@ -2,6 +2,11 @@ package org.springframework.cloud.ws.ui.model;
 
 import java.io.Serializable;
 
+/**
+ *
+ * Author:Tiger Shi
+ * Date:2024/12/4
+ */
 public class WebServiceDesc implements Serializable {
 
     private static final long serialVersionUID = 7606115337827672912L;

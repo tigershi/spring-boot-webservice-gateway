@@ -4,6 +4,8 @@ package org.springframework.cloud.ws.ui.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Author:Tiger Shi
+ * Date:2024/12/4
  * 此接口用于webservice module 定义
  */
 @Target({ElementType.TYPE})

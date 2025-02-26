@@ -9,6 +9,7 @@ import reactor.core.publisher.Mono;
 
 /**
  * Author:Tiger Shi
+ * * Date: 2024/12/1
  * It use to filter gateway server's register information. Gateway server needn't to a route agent
  * 过滤gateway 服务的注册信息，因为gateway 不需要路由
  */

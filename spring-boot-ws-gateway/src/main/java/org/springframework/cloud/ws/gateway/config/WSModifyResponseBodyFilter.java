@@ -24,6 +24,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * Author:Tiger Shi
+ * * Date: 2024/12/1
  * It use to redirect the web-service service address need to redirect server address to gateway address
  * webservice 地址需要修改为代理服务器或者gateway 地址
  */

@@ -30,6 +30,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ *  * Author:Tiger Shi
+ *  * Date:2024/12/4
+ *  webservice description interface
+ */
 @Controller
 @ConditionalOnProperty(name="spring.cloud.webservice.ui.enable", havingValue= "true", matchIfMissing = false)
 public class WsInterfaceControl {
