@@ -4,7 +4,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'org.springframework.boot'
 
 description = 'the common check'
-archivesBaseName = 'spring-boot-ws-gateway-sample'
+archivesBaseName = 'ws-gateway-sample'
 
 
 sourceSets {

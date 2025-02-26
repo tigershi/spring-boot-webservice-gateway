@@ -3,5 +3,5 @@ rootProject.name = 'spring-boot-webservice-gateway'
 //spring boot gateway
 include('spring-boot-ws-ui')
 include('spring-boot-ws-gateway')
-include('spring-boot-ws-gateway-sample')
-include('spring-boot-ws-sample')
+include('ws-gateway-sample')
+include('ws-server-sample')

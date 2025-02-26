@@ -5,7 +5,7 @@ apply plugin: 'org.springframework.boot'
 
 
 description = 'the common check'
-archivesBaseName = 'spring-boot-ws-sample'
+archivesBaseName = 'ws-server-sample'
 
 
 sourceSets {

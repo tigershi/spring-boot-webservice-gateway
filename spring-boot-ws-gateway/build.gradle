@@ -3,8 +3,8 @@ apply plugin: 'java-library'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'org.springframework.boot'
 
-description = 'the common check'
-archivesBaseName = 'ws_gateway'
+description = 'web service gateway'
+archivesBaseName = 'spring-boot-ws-gateway'
 
 
 sourceSets {
@@ -32,18 +32,19 @@ dependencies {
 
 }
 
-jar.enabled = false
-static def releaseTime() {
-    return new Date().format("yyyy-MM-dd HH:mm:ss")
-}
 
 bootJar {
     enabled = false
 }
 
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd HH:mm:ss")
+}
+
 jar {
     enabled = true
     manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart'
         attributes("Build-Time": releaseTime())
     }
 }
