@@ -1,5 +1,5 @@
 @startuml
-!theme xuanye from ../
+!theme xuanye from ./
 title 基于微服务的 webservice 平台负载均衡方案
 
 
