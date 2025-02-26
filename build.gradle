@@ -17,7 +17,8 @@ buildscript {
 }
 
 
-allprojects{
+
+subprojects{
     version = '1.0.0'
 
     apply plugin: 'java'
@@ -38,11 +39,6 @@ allprojects{
     }
 
 
-
-}
-
-subprojects{
-
     sourceCompatibility = '1.8'
 
     ext {
@@ -58,6 +54,7 @@ subprojects{
         springCloudVersion='2021.0.9'
         springCloudAlibabaVersion='2021.0.5.0'
         springWebVersion='5.3.31'
+        springGatewayVersion='3.1.9'
         springBootVersion = "$springBootVersion"
 
     }

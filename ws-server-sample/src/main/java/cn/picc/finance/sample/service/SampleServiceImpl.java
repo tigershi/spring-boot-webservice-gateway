@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 @RefreshScope
 public class SampleServiceImpl implements SampleService{
-    @Value("${ws.sample.config.student.name}")
+    @Value("${ws.sample.config.student.name:test lili}")
     private String studentName;
-    @Value("${ws.sample.config.teacher.name}")
+    @Value("${ws.sample.config.teacher.name:lucy}")
     private String teachName;
 
     @Override

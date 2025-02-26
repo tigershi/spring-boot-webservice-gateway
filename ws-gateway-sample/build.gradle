@@ -27,8 +27,10 @@ dependencyManagement {
 
 
 dependencies {
-    implementation project(":spring-boot-ws-ui")
-    implementation project(":spring-boot-ws-gateway")
+    //implementation project(":spring-boot-ws-ui")
+    //implementation project(":spring-boot-ws-gateway")
+
+    implementation fileTree(dir: 'lib', include: ['*.jar'])
     implementation("org.springframework.cloud:spring-cloud-starter-loadbalancer")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
     implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
@@ -36,7 +38,7 @@ dependencies {
 
 }
 
-jar.enabled = false
+
 static def releaseTime() {
     return new Date().format("yyyy-MM-dd HH:mm:ss")
 }

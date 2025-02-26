@@ -19,9 +19,6 @@ public class WSReactiveDiscoveryClient implements ReactiveDiscoveryClient {
     private ReactiveDiscoveryClient client;
 
     public WSReactiveDiscoveryClient(String serverId,  ReactiveDiscoveryClient client){
-        if(client instanceof ReactiveCompositeDiscoveryClient){
-            System.out.println("----------------------------------ReactiveCompositeDiscoveryClient");
-        }
         this.gateWayServerId = serverId;
         this.client = client;
     }
