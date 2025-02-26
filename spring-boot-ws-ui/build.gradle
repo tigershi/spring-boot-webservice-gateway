@@ -1,0 +1,16 @@
+
+// jar‘s name
+archivesBaseName = 'spring-boot-ws-ui'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart'
+    }
+}
+
+
+dependencies {
+    compileOnly("org.springframework:spring-webmvc:$springWebVersion")
+    compileOnly("org.springframework.boot:spring-boot-autoconfigure:$springBootVersion")
+    compileOnly("javax.servlet:javax.servlet-api:4.0.1")
+}

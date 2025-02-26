@@ -1,0 +1,16 @@
+app.start.host.ip=0.0.0.0
+app.webservice.ui.enable=true
+
+server.port=9101
+server.servlet.context-path=/${spring.application.name}
+server.shutdown=graceful
+#shutdown phase
+spring.lifecycle.timeout-per-shutdown-phase=45s
+
+#sample config change config
+ws.sample.config.teacher.name=LILaoShi
+ws.sample.config.student.name=XiaoMing
+
+#webservice config
+logging.config=classpath:logback.xml
+

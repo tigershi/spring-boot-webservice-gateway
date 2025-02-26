@@ -1,0 +1,69 @@
+buildscript {
+    ext {
+        springBootVersion = '2.7.18'
+    }
+    repositories {
+        mavenLocal()
+        maven { url "https://mirrors.huaweicloud.com/repository/maven"}
+        maven { url "https://mirrors.cloud.tencent.com/nexus/repository/maven-public"}
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
+        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1")
+    }
+}
+
+
+allprojects{
+    version = '1.0.0'
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: "org.sonarqube"
+    apply plugin: "jacoco"
+
+
+    group = 'cn.picc.finance'
+
+    repositories {
+        mavenLocal()
+        maven { url "https://mirrors.huaweicloud.com/repository/maven"}
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        mavenCentral()
+    }
+
+
+
+}
+
+subprojects{
+
+    sourceCompatibility = '1.8'
+
+    ext {
+        deployPath="$rootDir/publish/"
+        commonsCodecVersion='1.15'
+        //com.alibaba:fastjson
+        fastjsonVersion='1.2.83'
+        //org.apache.cxf:cxf-spring-boot-starter-jaxws
+        cxfSpringJaxwsVersion='3.5.8'
+        //ch.qos.logback.core
+        logbackVersin='1.2.12'
+        slf4jVersion='1.7.36'
+        springCloudVersion='2021.0.9'
+        springCloudAlibabaVersion='2021.0.5.0'
+        springWebVersion='5.3.31'
+        springBootVersion = "$springBootVersion"
+
+    }
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+}
+

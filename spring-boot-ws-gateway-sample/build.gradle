@@ -1,0 +1,58 @@
+
+apply plugin: 'java-library'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.springframework.boot'
+
+description = 'the common check'
+archivesBaseName = 'spring-boot-ws-gateway-sample'
+
+
+sourceSets {
+  test {
+    java.srcDirs = ['src/test/java']
+    java.outputDir = file('build/classes/test')
+    output.resourcesDir = file('build/classes/test')
+    resources.srcDirs = ['src/test/resources']
+  }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:$springCloudAlibabaVersion"
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
+
+    }
+
+}
+
+
+dependencies {
+    implementation project(":spring-boot-ws-ui")
+    implementation project(":spring-boot-ws-gateway")
+    implementation("org.springframework.cloud:spring-cloud-starter-loadbalancer")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    implementation("org.springframework.cloud:spring-cloud-starter-gateway")
+
+}
+
+jar.enabled = false
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd HH:mm:ss")
+}
+bootJar {
+    manifest {
+        attributes("Build-Time": releaseTime())
+    }
+}
+
+
+task copyLibs(type :Copy, dependsOn: bootJar) {
+    from "$buildDir/libs"
+    into "$deployPath"
+    println "publish the installer to : ->  $deployPath"
+    include "**/*.jar"
+}
+
+assemble.dependsOn.add copyLibs
+

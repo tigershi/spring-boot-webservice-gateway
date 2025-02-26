@@ -1,0 +1,21 @@
+app:
+  start:
+    host:
+      ip: 0.0.0.0
+server:
+  port: 9200
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: wscw@202501
+        namespace: public
+        group: dev
+    gateway:
+      enabled: true
+      discovery:
+          locator:
+            enabled: false
+            lower-case-service-id: true

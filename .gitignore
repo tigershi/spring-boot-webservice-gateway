@@ -1,0 +1,18 @@
+.gradle
+/build/
+/bin/
+### STS ###
+.idea/
+.classpath
+.factorypath
+.project
+.settings
+/publish/
+.svn/
+data/
+log/
+logs/
+derby.log
+/bo-auto-web/build/
+
+
